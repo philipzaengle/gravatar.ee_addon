@@ -18,7 +18,7 @@ $plugin_info = array(
  * @category		Plugin
  * @author			Philip Zaengle
  * @copyright		Copyright (c) 2009, Philip Zaengle
- * @link			http://www.philipzaengle.com
+ * @link			http://www.philipzaengle.com/expressionengine_addons/gravatar
  */
 
 class Gravatar
