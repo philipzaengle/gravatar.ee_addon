@@ -52,7 +52,7 @@ var $return_data = "";
 	  $email = is_array($results) ? 'dontknowhwattputheresoihopethisworks@google.com' : $results;
     }
 
-    $grav_url = "http://www.gravatar.com/avatar.php?gravatar_id=".md5($email);
+    $grav_url = "http://www.gravatar.com/avatar.php?gravatar_id=".md5(strtolower($email));
 	if($rating && $rating != '')
 		$grav_url .= "&amp;rating=".$rating;
 	if($size && $size != '')
