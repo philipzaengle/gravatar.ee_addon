@@ -2,9 +2,9 @@
 
 This plugin requires at a bare minimum one of two possible parameters depending on where you wish to use it. The first option is a user's email address {email} and the second option is a user's screen name {name}. The reason for this is so the plugin can be used in situations where one or the other parameter won't return the proper result. It is recommended that you use {email} for comment and entry loops and {name} for display in member profile templates, but feel free to experiment. Here's the two minimum required uses:
 
-<img src="{exp:gravatar email="{email}"}" /> -- For use in comment or entry loops.
+	<img src="{exp:gravatar email="{email}"}" /> -- For use in comment or entry loops.
 
-<img src="{exp:gravatar name="{name}"}" /> -- For use in templates such as Member Profiles where {email} won't work as expected.
+	<img src="{exp:gravatar name="{name}"}" /> -- For use in templates such as Member Profiles where {email} won't work as expected.
 
 
 ## OPTIONAL PARAMETERS 
@@ -25,25 +25,26 @@ Allows you to define how big the gravatar will be in pixels. Any size other than
 
 Here's a few examples that you might use:
 
-<img src="{exp:gravatar email="{email}" rating="PG"}" />
+	<img src="{exp:gravatar email="{email}" rating="PG"}" />
 
 Only displays gravatars of PG rating or lower.
 
-<img src="{exp:gravatar email="{email}" rating="R" size="40"}" />
+	<img src="{exp:gravatar email="{email}" rating="R" size="40"}" />
 
 Displays 40x40 pixel gravatars of R rating or lower.
 
-<img src="{exp:gravatar email="{email}" size="70" default="http://www.somesite.com/someimage.jpg"}" alt="Picture of {name}" title="{name}" class="avatar" />
+	<img src="{exp:gravatar email="{email}" size="70" default="http://www.somesite.com/someimage.jpg"}" alt="Picture of {name}" title="{name}" class="avatar" />
 
 Displays gravatars of 70x70 pixels or a default graphic for users without a gravatar. Puts the user's name in the alt and title tags and styles the image using a class called "avatar."
 
-<div class='profileTitle'><img src="{exp:gravatar name="{name}" size="80" rating="R"}" style="float: left; margin: 0; padding: 6px;" alt="{name} pic" title="{name}" />{name}</div>
-<p>{lang:member_group}&nbsp; <b>{member_group}</b></p>
+	<div class='profileTitle'><img src="{exp:gravatar name="{name}" size="80" rating="R"}" style="float: left; margin: 0; padding: 6px;" alt="{name} pic" title="{name}" />{name}</div>
+	<p>{lang:member_group}&nbsp; <b>{member_group}</b></p>
 
 The above is a snippet of code from my Public Member Profile template showing how to insert a gravatar into the member listings for your site.
 
 ## Credit
 Current Developer: Philip Zaengle
+
 Original Developer: Les Jenkins of http://stupidevilbastard.com/
 
 ## Change Log
