@@ -123,7 +123,7 @@ Displays gravatars of 70x70 pixels or a default graphic for users without a grav
 The above is a snippet of code from my Public Member Profile template showing how to insert a gravatar into the member listings for your site.
 
 == Credit ==
-Current Developer: Philip Zaengle
+Current Developer: Philip Zaengle http://www.philipzaengle.com
 Original Developer: Les Jenkins of http://stupidevilbastard.com/
 
 == Change Log ==
