@@ -53,13 +53,14 @@ var $return_data = "";
     }
 
     $grav_url = "http://www.gravatar.com/avatar/".md5(strtolower($email));
-	if($default && $default != '')
-		$grav_url .= "&#63;d=".$default;
+
 	if($size && $size != '')
 		$grav_url .="&#63;s=".$size;
 	if($rating && $rating != '')
 		$grav_url .= "&#63;r=".$rating;
-    
+    if($default && $default != '')
+		$grav_url .= "&#63;d=".$default;
+		
     $this->return_data = $grav_url;
   }
 
