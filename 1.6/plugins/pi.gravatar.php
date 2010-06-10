@@ -2,7 +2,7 @@
 
 $plugin_info = array(
   'pi_name' => 'Gravatar',
-  'pi_version' => '2.1',
+  'pi_version' => '2.1.1',
   'pi_author' => 'Philip Zaengle',
   'pi_author_url' => 'http://www.philipzaengle.com/',
   'pi_description' => 'Returns gravatar URL',
