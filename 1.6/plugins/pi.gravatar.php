@@ -32,13 +32,14 @@ var $return_data = "";
     }
 
     $grav_url = "http://www.gravatar.com/avatar/".md5(strtolower($email));
-	if($default && $default != '')
-		$grav_url .= "&#63;d=".$default;
+
 	if($size && $size != '')
 		$grav_url .="&#63;s=".$size;
 	if($rating && $rating != '')
 		$grav_url .= "&#63;r=".$rating;
-    
+    if($default && $default != '')
+		$grav_url .= "&#63;d=".$default;
+		
     $this->return_data = $grav_url;
     
   }
@@ -98,7 +99,7 @@ Displays gravatars of 70x70 pixels or a default graphic for users without a grav
 The above is a snippet of code from my Public Member Profile template showing how to insert a gravatar into the member listings for your site.
 
 == Credit ==
-Current Developer: Philip Zaengle
+Current Developer: Philip Zaengle http://www.philipzaengle.com
 Original Developer: Les Jenkins of http://stupidevilbastard.com/
 
 == Change Log ==
