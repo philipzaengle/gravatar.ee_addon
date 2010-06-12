@@ -2,7 +2,7 @@
 
 $plugin_info = array(
   'pi_name' => 'Gravatar',
-  'pi_version' => '2.1.1',
+  'pi_version' => '2.1.2',
   'pi_author' => 'Philip Zaengle',
   'pi_author_url' => 'http://www.philipzaengle.com/',
   'pi_description' => 'Returns gravatar URL',
@@ -31,15 +31,17 @@ var $return_data = "";
 	  $email = is_array($results) ? 'error@error.com' : $results;
     }
 
-    $grav_url = "http://www.gravatar.com/avatar/".md5(strtolower($email));
+    $grav_url = "http://www.gravatar.com/avatar/".md5(strtolower($email))."?";
 
 	if($size && $size != '')
-		$grav_url .="&#63;s=".$size;
+		$grav_url .="s=".$size."&";
 	if($rating && $rating != '')
-		$grav_url .= "&#63;r=".$rating;
-    if($default && $default != '')
-		$grav_url .= "&#63;d=".$default;
+		$grav_url .= "r=".$rating."&";
+	if($default && $default != '')
+		$grav_url .= "d=".$default."&";
 		
+	$grav_url =	substr_replace($grav_url ,"",-1);
+		    
     $this->return_data = $grav_url;
     
   }
@@ -99,7 +101,7 @@ Displays gravatars of 70x70 pixels or a default graphic for users without a grav
 The above is a snippet of code from my Public Member Profile template showing how to insert a gravatar into the member listings for your site.
 
 == Credit ==
-Current Developer: Philip Zaengle http://www.philipzaengle.com
+Current Developer: Philip Zaengle
 Original Developer: Les Jenkins of http://stupidevilbastard.com/
 
 == Change Log ==
