@@ -52,7 +52,8 @@ var $return_data = "";
 	  $email = is_array($results) ? 'error@error.com' : $results;
     }
 
-    $grav_url = "http://www.gravatar.com/avatar/".md5(strtolower($email))."?";
+    $grav_base = (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] == "on") ? "https://secure.gravatar.com/avatar/" : "http://www.gravatar.com/avatar/";
+    $grav_url = $grav_base.md5(strtolower($email))."?";
 
 	if($size && $size != '')
 		$grav_url .="s=".$size."&";
